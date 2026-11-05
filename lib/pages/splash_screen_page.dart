@@ -16,7 +16,7 @@ class SplashScreenPage extends StatefulWidget {
 // Kelas pengelola state, timer asinkron, dan logika navigasi Splash Screen 
 class _SplashScreenPageState extends State<SplashScreenPage> { 
   // --- DEKLARASI VARIABEL STATE & TIMER --- 
-  // Deklarasi variabel durasi hitung mundur dalam satuan detik (Nilai awal: 10 detik) 
+  // Deklarasi variabel durasi hitung mundur diubah menjadi 10 detik penuh
   int _durasiDetik = 10; 
  
   // Deklarasi variabel objek timer asinkron (Nullable '?' karena belum dibuat saat kelas diinisialisasi) 
@@ -72,9 +72,9 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   // Method build: Merender tata letak visual halaman pembuka Splash Screen 
   @override 
   Widget build(BuildContext context) { 
-    // Komponen/Widget Scaffold: Layar penuh dengan latar belakang warna Ungu (Deep Purple) selaras tema 
+    // Komponen/Widget Scaffold: Layar penuh dengan latar belakang warna ungu elegan
     return Scaffold( 
-      backgroundColor: Colors.deepPurple,          // Disesuaikan dengan seedColor: Colors.deepPurple 
+      backgroundColor: Colors.purple.shade800,    // Deklarasi warna latar belakang: Ungu Elegan
       // Komponen/Widget Center: Memposisikan seluruh komponen tepat di tengah layar secara vertikal & horizontal 
       body: Center( 
         // Komponen/Widget Column: Menyusun logo, judul, indikator putar, dan timer secara vertikal 
@@ -98,11 +98,11 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                   ), 
                 ], 
               ), 
-              // Komponen/Widget Icon: Ikon mesin kasir berukuran besar dengan warna ungu 
+              // Komponen/Widget Icon: Ikon mesin kasir berukuran besar dengan warna ungu
               child: const Icon( 
                 Icons.point_of_sale_rounded, 
                 size: 72, 
-                color: Colors.deepPurple,           // Warna ikon disesuaikan dengan tema ungu 
+                color: Colors.purple,           // Warna ikon serasi dengan tema Ungu
               ), 
             ), 
             const SizedBox(height: 24),             // Jarak pemisah vertikal 24 piksel 
@@ -145,19 +145,19 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
               ), 
             ), 
             const SizedBox(height: 14),             // Jarak spasi 14 piksel 
-            // Komponen/Widget Text: Menampilkan status hitung mundur (10 detik) secara reaktif 
+            // Komponen/Widget Text: Menampilkan status hitung mundur 10 detik secara reaktif 
             Text( 
-              'Menyiapkan sistem SmartKasir ($_durasiDetik detik)...', 
+              'Menyiapkan sistem SmartKasir ($_durasiDetik detik)...', // Teks keterangan dengan durasi 10 detik
               style: const TextStyle( 
                 fontSize: 12, 
                 color: Colors.white70, 
               ), 
             ), 
             const SizedBox(height: 40),             // Jarak pemisah ke footer 
-            // Komponen/Widget Text: Catatan modul versi praktikum 
+            // Komponen/Widget Text: Catatan modul versi praktikum dengan nuansa ungu muda
             Text( 
               'Versi 1.0.0 — Modul Pertemuan 10', 
-              style: TextStyle(fontSize: 11, color: Colors.deepPurple.shade200), 
+              style: TextStyle(fontSize: 11, color: Colors.purple.shade200), 
             ), 
           ], 
         ), 
